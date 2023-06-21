@@ -28,21 +28,23 @@ class ListMusic
   def add_music_album
     puts 'Publlish date (YYYY-MM-DD): '
     publish_date = gets.chomp
-    on_spotify = get_spotify_availability
+    on_spotify = spotify_availability
 
     music_album = MusicAlbum.new(on_spotify, publish_date)
+    @albums << music_album
     puts 'Album created successfully'
 
     puts 'Add the genre if the album'
     name = gets.chomp
     @genres << Genre.new(name)
-    puts '#{name} gnere created successfully'
+    puts "#{name} gnere created successfully"
   end
 
-  def get_spotify_availability
+  def spotify_availability
     loop do
       puts 'Is it on Spotify? (Y/N): '
       input = gets.chomp.downcase
+      return input == 't' if %w[t f].include?(input)
     end
   end
 end
