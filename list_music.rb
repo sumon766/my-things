@@ -41,8 +41,8 @@ class ListMusic
 
   def get_spotify_availability
     loop do
-        puts 'Is it on Spotify? (Y/N): '
-        input = gets.chomp.downcase
+      puts 'Is it on Spotify? (Y/N): '
+      input = gets.chomp.downcase
     end
   end
 end
