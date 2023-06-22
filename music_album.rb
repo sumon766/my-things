@@ -4,9 +4,10 @@ require_relative 'item'
 class MusicAlbum < Item
   attr_accessor :on_spotify, :publish_date
 
-  def initialize(on_spotify, publish_date)
+  def initialize(on_spotify, publish_date, id = nil)
     super(publish_date)
     @on_spotify = on_spotify
+    @id = id || SecureRandom.uuid
   end
 
   def can_be_archived?
