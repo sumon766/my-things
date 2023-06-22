@@ -1,5 +1,6 @@
 require_relative 'genre'
 require_relative 'item'
+require 'securerandom'
 
 class MusicAlbum < Item
   attr_accessor :on_spotify, :publish_date
