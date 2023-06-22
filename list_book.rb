@@ -49,7 +49,7 @@ class ListBook
     end
 
     def stimulate_cover_state
-        puts 'Please, Enter the cover state of the book'
+        puts 'Please, Enter the cover state of the book (GOOD/BAD)'
         cover_state = gets.chomp.upcase
         return cover_state if %w[GOOD BAD].include?(cover_state)
 
