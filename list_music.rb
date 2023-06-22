@@ -60,14 +60,14 @@ class ListMusic
   def save_album
     albums = @albums.map { |album| { id: album.id, publish_date: album.publish_date, on_spotify: album.on_spotify } }
     dir_path = File.dirname('data/music.json')
-    FileUtils.mkdir_p(dir_path) unless Dir.exist?(dir_path)
+    FileUtils.mkdir_p(dir_path)
     File.write('data/music.json', JSON.pretty_generate(albums))
   end
 
   def save_genres
     genres = @genres.map { |genre| { name: genre.name } }
     dir_path = File.dirname('data/genres.json')
-    FileUtils.mkdir_p(dir_path) unless Dir.exist?(dir_path)
+    FileUtils.mkdir_p(dir_path)
     File.write('data/genres.json', JSON.pretty_generate(genres))
   end
 
