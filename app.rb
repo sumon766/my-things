@@ -3,11 +3,13 @@ require_relative 'music_album'
 require_relative 'genre'
 require_relative 'list_book'
 require_relative 'book'
+require_relative 'list_game'
 
 class App
   def initialize
     @music = ListMusic.new
     @book = ListBook.new
+    @game = ListGame.new
   end
 
   def select_option(option)
@@ -20,6 +22,10 @@ class App
       @music.list_music_albums
     when '4'
       @music.list_genres
+    when '5'
+      @game.list_all_game  
+    when '6'
+      @game.list_authors  
     end
   end
 
@@ -29,6 +35,8 @@ class App
       @book.add_book
     when '8'
       @music.add_music_album
+    when '9'
+      @game.add_game  
     end
   end
 end
