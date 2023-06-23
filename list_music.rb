@@ -39,7 +39,7 @@ class ListMusic
     @albums << music_album
     puts 'Album created successfully'
 
-    puts 'Add the genre of the album'
+    puts 'Add the genre of the album (Rock, Sad, Love)'
     name = gets.chomp
     @genres << Genre.new(name)
     puts "#{name} Genre created successfully"

@@ -25,9 +25,9 @@ class App
 
   def add_items(option)
     case option
-    when '5'
+    when '7'
       @book.add_book
-    when '6'
+    when '8'
       @music.add_music_album
     end
   end
