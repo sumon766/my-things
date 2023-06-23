@@ -1,15 +1,13 @@
 require 'date'
 
 class Item
-  attr_accessor :genre, :author, :source, :label, :publish_date
-  attr_reader :id, :archived
+  attr_reader :id, :archived, :publish_date, :author, :label
 
   def initialize(publish_date, archived: false)
     @id = Random.rand(1...1000)
     @publish_date = publish_date
     @archived = archived
     @label = nil
-    @genre = nil
     @author = nil
   end
 
@@ -22,5 +20,23 @@ class Item
 
   def move_to_archive
     @archived = can_be_archived?
+  end
+
+  # rubocop:disable Style/TrivialAccessors
+  def author=(value)
+    @author = value
+  end
+
+  def label=(value)
+    @label = value
+  end
+  # rubocop:enable Style/TrivialAccessors
+
+  def add_to_label(*)
+    @label.add_item(self)
+  end
+
+  def add_to_author(*)
+    @author.add_item(self)
   end
 end
