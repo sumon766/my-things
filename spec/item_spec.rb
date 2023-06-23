@@ -31,25 +31,25 @@ RSpec.describe Item do
 
   describe '#can_be_archived?' do
     it 'returns true when the item can be archived' do
-      item = Item.new((Time.now.year - 11).to_s + '-01-01')
+      item = Item.new("#{Time.now.year - 11}-01-01")
       expect(item.can_be_archived?).to be(true)
     end
 
     it 'returns false when the item cannot be archived' do
-      item = Item.new(Time.now.year.to_s + '-01-01')
+      item = Item.new("#{Time.now.year}-01-01")
       expect(item.can_be_archived?).to be(false)
     end
   end
 
   describe '#move_to_archive' do
     it 'sets archived to true when the item can be archived' do
-      item = Item.new((Time.now.year - 11).to_s + '-01-01')
+      item = Item.new("#{Time.now.year - 11}-01-01")
       item.move_to_archive
       expect(item.archived).to be(true)
     end
 
     it 'sets archived to false when the item cannot be archived' do
-      item = Item.new(Time.now.year.to_s + '-01-01')
+      item = Item.new("#{Time.now.year}-01-01")
       item.move_to_archive
       expect(item.archived).to be(false)
     end

@@ -7,9 +7,9 @@ describe ListBook do
     context 'when there are labels' do
       before do
         list_book.instance_variable_set(:@labels, [
-          Label.new('Fiction', 'Red'),
-          Label.new('Fantasy', 'Blue')
-        ])
+                                          Label.new('Fiction', 'Red'),
+                                          Label.new('Fantasy', 'Blue')
+                                        ])
       end
 
       it 'prints the details of each label' do
@@ -27,9 +27,9 @@ describe ListBook do
     context 'when there are books' do
       before do
         list_book.instance_variable_set(:@books, [
-          Book.new('2022-01-01', 'Publisher A', 'GOOD'),
-          Book.new('2022-02-01', 'Publisher B', 'BAD')
-        ])
+                                          Book.new('2022-01-01', 'Publisher A', 'GOOD'),
+                                          Book.new('2022-02-01', 'Publisher B', 'BAD')
+                                        ])
       end
 
       it 'prints the details of each book' do

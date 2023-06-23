@@ -7,9 +7,9 @@ describe ListMusic do
     context 'when there are genres' do
       before do
         list_music.instance_variable_set(:@genres, [
-          Genre.new('Rock'),
-          Genre.new('Pop')
-        ])
+                                           Genre.new('Rock'),
+                                           Genre.new('Pop')
+                                         ])
       end
 
       it 'prints the details of each genre' do
@@ -27,9 +27,9 @@ describe ListMusic do
     context 'when there are music albums' do
       before do
         list_music.instance_variable_set(:@albums, [
-          MusicAlbum.new(true, '2022-01-01'),
-          MusicAlbum.new(false, '2022-02-01')
-        ])
+                                           MusicAlbum.new(true, '2022-01-01'),
+                                           MusicAlbum.new(false, '2022-02-01')
+                                         ])
       end
 
       it 'prints the details of each music album' do
