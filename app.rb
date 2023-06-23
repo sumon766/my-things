@@ -23,9 +23,9 @@ class App
     when '4'
       @music.list_genres
     when '5'
-      @game.list_all_game  
+      @game.list_all_game
     when '6'
-      @game.list_authors  
+      @game.list_authors
     end
   end
 
@@ -36,7 +36,7 @@ class App
     when '8'
       @music.add_music_album
     when '9'
-      @game.add_game  
+      @game.add_game
     end
   end
 end
