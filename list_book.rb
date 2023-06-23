@@ -32,13 +32,13 @@ class ListBook
   end
 
   def add_book
-    puts 'Please, enter your the name of the book'
+    puts 'Please, enter the name of your book'
     title = gets.chomp
     puts 'Please, enter the color of the book'
     color = gets.chomp
-    puts 'Please, enter the publish year of the book (YYYY-MM-DD): '
+    puts 'Please, enter the publishing date of the book (YYYY-MM-DD): '
     publish_date = gets.chomp
-    puts 'Please, enter the publisher of the book: '
+    puts 'Please, enter the publisher name of the book: '
     publisher = gets.chomp
 
     cover_state = stimulate_cover_state
