@@ -14,35 +14,35 @@ RSpec.describe Book do
     end
   end
 
-  # describe '#can_be_archived?' do
-  #   it 'returns true when the cover state is bad' do
-  #     publish_date = '2022-01-01'
-  #     publisher = 'Little, Brown and Company'
-  #     cover_state = 'bad'
+  describe '#can_be_archived?' do
+    it 'returns true when the cover state is bad' do
+      publish_date = '2022-01-01'
+      publisher = 'Little, Brown and Company'
+      cover_state = 'bad'
 
-  #     book = Book.new(publish_date, publisher, cover_state)
+      book = Book.new(publish_date, publisher, cover_state)
 
-  #     expect(book.send(:can_be_archived?)).to eq(true)
-  #   end
+      expect(book.send(:can_be_archived?)).to eq(true)
+    end
 
-  #   it 'returns false when the cover state is not bad' do
-  #     publish_date = '2022-01-01'
-  #     publisher = 'Little, Brown and Company'
-  #     cover_state = 'good'
+    it 'returns false when the cover state is not bad' do
+      publish_date = '2022-01-01'
+      publisher = 'Little, Brown and Company'
+      cover_state = 'good'
 
-  #     book = Book.new(publish_date, publisher, cover_state)
+      book = Book.new(publish_date, publisher, cover_state)
 
-  #     expect(book.send(:can_be_archived?)).to eq(false)
-  #   end
+      expect(book.send(:can_be_archived?)).to eq(false)
+    end
 
-  #   it 'returns false when the publish date is less than 5 years ago' do
-  #     publish_date = '2020-01-01'
-  #     publisher = 'Little, Brown and Company'
-  #     cover_state = 'good'
+    it 'returns false when the publish date is less than 5 years ago' do
+      publish_date = '2020-01-01'
+      publisher = 'Little, Brown and Company'
+      cover_state = 'good'
 
-  #     book = Book.new(publish_date, publisher, cover_state)
+      book = Book.new(publish_date, publisher, cover_state)
 
-  #     expect(book.send(:can_be_archived?)).to eq(false)
-  #   end
-  # end
+      expect(book.send(:can_be_archived?)).to eq(false)
+    end
+  end
 end
