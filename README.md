@@ -6,7 +6,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
+  - [🚀 Live Video](#live-video)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
@@ -60,9 +60,9 @@
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo"></a>
+## 🚀 Live Video <a name="live-video"></a>
 
-- [Live Demo Not Available]()
+- [Check the live video](https://www.loom.com/share/a55f3a833dc948ce969cd2fe172ed410?sid=ee9aa7ff-9c64-460e-a1ac-46213349b4d1)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
