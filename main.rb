@@ -9,7 +9,7 @@ class Main
     loop do
       select_menu
       option = gets.chomp
-      if option == '3'
+      if option == '10'
         puts 'Thank you for using this app. See you later'
         break
       else

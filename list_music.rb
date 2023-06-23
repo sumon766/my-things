@@ -39,10 +39,10 @@ class ListMusic
     @albums << music_album
     puts 'Album created successfully'
 
-    puts 'Add the genre if the album'
+    puts 'Add the genre of the album (Rock, Sad, Love)'
     name = gets.chomp
     @genres << Genre.new(name)
-    puts "#{name} genre created successfully"
+    puts "#{name} Genre created successfully"
     save_album
     save_genres
   end
